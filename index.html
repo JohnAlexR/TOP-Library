@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinyl Library</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <h1>My Album Collection</h1>
+        <section id="albums-el">
+        </section>
+        <button class="open-button" id="openbtn">+
+        </button>
+        <div class="form-popup" id="newAlbumForm">
+            <form action="" class="form-container">
+                <h3>New Album</h3>
+
+                <label for="title">Title</label>
+                <input type="text" placeholder="Album Title" name="title" id="title-input">
+
+                <label for="artist">Artist</label>
+                <input type="text" placeholder="Artist" name="artist" id="artist-input">
+
+                <label for="year">year</label>
+                <input type="text" placeholder="Album year" name="year" id="year-input">
+
+                <button type="submit" onclick="closeForm()" id="submitbtn">submit</button>
+                <button type="button" onclick="closeForm()" id="closebtn">Close</button>
+
+            </form>
+
+        </div>
+    </main>
+</body>
+</html>
