@@ -26,7 +26,6 @@ submitbtn.addEventListener('click', () => {
     
     renderAlbums()
 
-    closeForm()
 })
 
 function closeForm() {
@@ -52,6 +51,8 @@ function Album(title, artist, year) {
 
 function renderAlbums() {
 
+albumsEl.innerHTML = ""
+
     for(let i = 0; i < myLibrary.length; i++) {
         const newAlbum = document.createElement('div')
         
@@ -60,11 +61,11 @@ function renderAlbums() {
         newAlbum.appendChild(newTitle)
 
         const newArtist = document.createElement('p')
-        newArtist.innerText = myLibrary[i].artist
+        newArtist.innerText = `Artist ${myLibrary[i].artist}`
         newAlbum.appendChild(newArtist)
 
         const newYear = document.createElement('p')
-        newYear.innerText = myLibrary[i].year
+        newYear.innerText = `Year ${myLibrary[i].year}`
         newAlbum.appendChild(newYear)
 
         albumsEl.appendChild(newAlbum)
